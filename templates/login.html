@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>TP2-RS40</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Authentification</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Nom d'utilisateur" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Mot de passe" name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Valider">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Erreur:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
